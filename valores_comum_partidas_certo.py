@@ -453,7 +453,7 @@ def gerar_resultados():
 
     df_ambas_transposto = df_ambas_transposto.reset_index(drop=True)
 
-    def encontrar_valores_comuns(dataframe):
+    def encontrar_valores_comuns(dataframe, porcentagem_desejada):
       porcentagem_desejada_metodo = porcentagem_desejada/10
       valores_comuns = []
 
@@ -495,7 +495,7 @@ def gerar_resultados():
 
       return valores_comuns, porcentagem_desejada
 
-    valores_marcaram, porcentagem_desejada = encontrar_valores_comuns(df_ambas_transposto)
+    valores_marcaram, porcentagem_desejada = encontrar_valores_comuns(df_ambas_transposto, porcentagem_desejada)
 
     # Criando o DataFrame final
     df_result = pd.DataFrame({
