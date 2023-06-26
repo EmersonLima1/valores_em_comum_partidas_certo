@@ -14,9 +14,9 @@ st.write('\n\n')
 # Perguntas para o usuário
 primeiro_tempo1 = st.selectbox("Qual o resultado do primeiro tempo?", ['0x0','0x1','0x2','0x3','0x4','0x5','1x0','1x1','1x2','1x3','1x4','1x5','2x0','2x1','2x2','2x3','2x4','2x5','3x0','3x1','3x2','3x3','3x4','3x5','4x0','4x1','4x2','4x3','4x4','4x5','5x0','5x1','5x2','5x3','5x4','5x5'])
 tempo_final1 = st.selectbox("Qual o resultado do tempo final?", ['0x0','0x1','0x2','0x3','0x4','0x5','1x0','1x1','1x2','1x3','1x4','1x5','2x0','2x1','2x2','2x3','2x4','2x5','3x0','3x1','3x2','3x3','3x4','3x5','4x0','4x1','4x2','4x3','4x4','4x5','5x0','5x1','5x2','5x3','5x4','5x5'])
-num_total_partidas = st.number_input("Qual a quantidade de partidas após a ocorrência do padrão você deseja analisar?", min_value=1, value=50, step=1)
-porcentagem_acerto = st.number_input("Porcentagem de acerto (Ambas marcaram em pelo menos uma das três partidas):", min_value=1, value=50, step=1)
-porcentagem_desejada = st.number_input("Do total de partidas que deu certo, deseja verificar os valores em comum em até quantos % dessas partidas?", min_value=1, value=50, step=1)
+num_total_partidas1 = st.number_input("Qual a quantidade de partidas após a ocorrência do padrão você deseja analisar?", min_value=1, value=50, step=1)
+porcentagem_acerto1 = st.number_input("Porcentagem de acerto (Ambas marcaram em pelo menos uma das três partidas):", min_value=1, value=50, step=1)
+porcentagem_desejada1 = st.number_input("Do total de partidas que deu certo, deseja verificar os valores em comum em até quantos % dessas partidas?", min_value=1, value=50, step=1)
 num_conjuntos = 3
 
 def gerar_resultados():
@@ -138,9 +138,9 @@ def gerar_resultados():
       # Solicitar informações do usuário
       primeiro_tempo = primeiro_tempo1
       tempo_final = tempo_final1
-      num_total_partidas = num_total_partidas
-      porcentagem_acerto = porcentagem_acerto
-      porcentagem_desejada = porcentagem_desejada
+      num_total_partidas = num_total_partidas1
+      porcentagem_acerto = porcentagem_acerto1
+      porcentagem_desejada = porcentagem_desejada1
       num_conjuntos = 3
 
       # Redefinir o índice do DataFrame df_analisar_st
