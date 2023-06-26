@@ -285,7 +285,7 @@ def gerar_resultados():
               valores = total_am.split()[0].split('/')
               diferenca = int(valores[1]) - int(valores[0])
               
-              # Verificar se a diferença é no mínimo 10
+              # Verificar se a diferença é no máximo 10
               if diferenca <= 10:
                   
                   # Adicionar o valor da coluna "Partidas após" à lista
@@ -454,7 +454,7 @@ def gerar_resultados():
     df_ambas_transposto = df_ambas_transposto.reset_index(drop=True)
 
     def encontrar_valores_comuns(dataframe, porcentagem_desejada):
-      porcentagem_desejada_metodo = porcentagem_desejada/10
+      porcentagem_desejada_metodo = porcentagem_desejada/100
       valores_comuns = []
 
       # Percorrendo as linhas do dataframe
