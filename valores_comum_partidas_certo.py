@@ -538,14 +538,7 @@ def gerar_resultados():
     df_result = df_result.dropna(subset=['Ambas marcaram'])
     st.write('Verificando ' + str(valor_partida) + ' após a ocorrência do padrão, esses foram os valores em comum em ' + str(porcentagem_desejada) + '% das partidas em que deu certo')
     
-    # Cabeçalho da tabela
-    headers = ['Partidas atrás', 'Ambas marcaram']
-
-    # Renderizar a tabela usando tabulate
-    table = tabulate(data, headers, tablefmt='fancy_grid', numalign="center", stralign="center")
-
-    # Exibir a tabela no Streamlit
-    st.markdown(table, unsafe_allow_html=True)
+    st.write(df_result)
     
 # Botão "Gerar resultados"
 if st.button("Gerar resultados"):
