@@ -542,7 +542,7 @@ def gerar_resultados():
     headers = ['Partidas atrás', 'Ambas marcaram']
 
     # Renderizar a tabela usando tabulate
-    table = tabulate(data, headers, tablefmt='fancy_grid', tablefmt='fancy_grid', numalign="center", stralign="center")
+    table = tabulate(data, headers, tablefmt='fancy_grid', numalign="center", stralign="center")
 
     # Exibir a tabela no Streamlit
     st.markdown(table, unsafe_allow_html=True)
